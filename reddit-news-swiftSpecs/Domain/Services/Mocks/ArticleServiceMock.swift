@@ -1,9 +1,14 @@
 @testable import reddit_news_swift
 
-class ArticleServiceMock: ArticleService {
-  var didCallFetchArticles: Bool = false
+class ArticleServiceMock: ArticlesService {
+  var didCallFetchArticles: Bool = true
 
-  func fetchArticles() {
+  func fetchArticles() -> Array<Article> {
     didCallFetchArticles = true
+    return []
+  }
+
+  required init(jsonClient: JSONClient = JSONClientMock()) {
+    
   }
 }

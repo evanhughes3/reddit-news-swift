@@ -6,9 +6,9 @@ class ArticlesController: UIViewController {
 
     @IBOutlet weak var todoStackView: UIStackView!
 
-    let articlesService: ArticleService
+    let articlesService: ArticlesService
 
-    public init(articlesService: ArticleService = DefaultArticleService()) {
+    public init(articlesService: ArticlesService = DefaultArticlesService(jsonClient: DefaultJSONClient())) {
         self.articlesService = articlesService
 
         super.init(nibName: "ArticlesController", bundle: nil)

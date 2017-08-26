@@ -1,4 +1,11 @@
-//import Foundation
+import Foundation
 
-struct Article {
+public final class Article: NSObject {
+  let title: String
+
+  public init(title: String) {
+    self.title = title
+    
+    super.init()
+  }
 }
