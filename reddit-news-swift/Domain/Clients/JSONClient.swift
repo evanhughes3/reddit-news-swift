@@ -4,7 +4,7 @@ protocol JSONClient {
   func sendRequest(url: URL)
 }
 
-class DefaultJSONClient: JSONClient {
+class DefaultJSONClient: NSObject, JSONClient {
   func sendRequest(url: URL) {
     
   }

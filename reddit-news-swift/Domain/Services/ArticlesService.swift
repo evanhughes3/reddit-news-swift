@@ -2,13 +2,12 @@ import Foundation
 
 protocol ArticlesService {
   func fetchArticles() -> Array<Article>
-  init(jsonClient: JSONClient)
 }
 
-class DefaultArticlesService: ArticlesService {
+class DefaultArticlesService: NSObject, ArticlesService {
   let jsonClient: JSONClient
 
-  public required init (jsonClient: JSONClient = DefaultJSONClient()) {
+  public required init (jsonClient: JSONClient) {
     self.jsonClient = jsonClient
   }
 

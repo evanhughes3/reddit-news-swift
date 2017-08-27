@@ -8,8 +8,8 @@ class ArticlesController: UIViewController {
 
     let articlesService: ArticlesService
 
-    public init(articlesService: ArticlesService = DefaultArticlesService(jsonClient: DefaultJSONClient())) {
-        self.articlesService = articlesService
+    public init(articlesService: ArticlesService) {
+        self.articlesService = articlesService;
 
         super.init(nibName: "ArticlesController", bundle: nil)
     }
