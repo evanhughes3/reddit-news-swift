@@ -15,7 +15,7 @@ class ArticlesControllerSpec: QuickSpec {
         injector = InjectorProvider.injector()
         
         articleService = ArticlesServiceMock()
-        injector.bind(DefaultArticlesService.self, toInstance: articleService)
+        injector.bind(ArticlesService.self, toInstance: articleService)
 
         subject = injector.getInstance(ArticlesController.self) as! ArticlesController
         subject.loadViewIfNeeded()

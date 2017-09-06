@@ -9,15 +9,15 @@ class ArticlesServiceSpec: QuickSpec {
     describe("ArticlesServiceSpec") {
       var injector: BSInjector & BSBinder!
       var jsonClient: JSONClientMock!
-      var subject: DefaultArticlesService!
+      var subject: ArticlesService!
 
       beforeEach {
         injector = InjectorProvider.injector()
 
         jsonClient = JSONClientMock();
-        injector.bind(DefaultJSONClient.self, toInstance: jsonClient)
+        injector.bind(JSONClient.self, toInstance: jsonClient)
 
-        subject = injector.getInstance(DefaultArticlesService.self) as! DefaultArticlesService
+        subject = injector.getInstance(ArticlesService.self) as! ArticlesService
       }
 
       describe("-fetchArticles") {
@@ -27,7 +27,7 @@ class ArticlesServiceSpec: QuickSpec {
 
         it("should fetch the articles") {
           expect(jsonClient.didCallSendRequest).to(equal(true));
-          expect(jsonClient.incomingURL?.absoluteString).to(equal("https://www.google.com"))
+          expect(jsonClient.incomingURLRequest?.url?.absoluteString).to(equal("https://www.google.com"))
         }
       }
     }

@@ -1,7 +1,7 @@
 import UIKit
 import Blindside
 
-@UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
@@ -13,9 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    let screenBounds = UIScreen.main.bounds
+    window = UIWindow(frame:screenBounds)
+    self.window?.rootViewController = UIViewController()
     window?.makeKeyAndVisible()
     window?.rootViewController = self.injector.getInstance(ArticlesController.self) as! ArticlesController
-
+    
     return true
   }
 }

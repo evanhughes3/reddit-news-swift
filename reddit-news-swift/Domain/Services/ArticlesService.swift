@@ -1,20 +1,21 @@
 import Foundation
 
-protocol ArticlesService {
+protocol FetchArticlesService {
   func fetchArticles() -> Array<Article>
 }
 
-class DefaultArticlesService: NSObject, ArticlesService {
-  let jsonClient: JSONClient
+class ArticlesService: NSObject, FetchArticlesService {
+  let jsonClient: NetworkClient
 
-  public required init (jsonClient: JSONClient) {
+  public required init (jsonClient: NetworkClient) {
     self.jsonClient = jsonClient
   }
 
   func fetchArticles() -> Array<Article> {
-    if let url = URL.init(string: "https://www.google.com") {
-      self.jsonClient.sendRequest(url: url)
-    }
+    let requestURL = URL(string: "https://www.google.com")!
+    let urlRequest = URLRequest(url: requestURL)
+
+    self.jsonClient.sendRequest(urlRequest: urlRequest)
 
     return []
   }

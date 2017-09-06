@@ -15,7 +15,9 @@ class AppDelegateSpec: QuickSpec {
         subject = AppDelegate()
 
         injector = InjectorProvider.injector()
-
+        
+        injector.bind(ArticlesService.self, toInstance: ArticlesServiceMock()) //to prevent actually making a request...
+        
         articlesController = injector.getInstance(ArticlesController.self) as! ArticlesController
         injector.bind(ArticlesController.self, toInstance: articlesController)
 

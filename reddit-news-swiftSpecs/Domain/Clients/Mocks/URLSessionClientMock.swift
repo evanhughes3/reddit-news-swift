@@ -1,12 +1,12 @@
 import Foundation
 @testable import reddit_news_swift
 
-class JSONClientMock: NetworkClient {
+class URLSessionClientMock: NetworkClient {
   var didCallSendRequest: Bool = false
-  var incomingURLRequest: URLRequest?
+  var incomingURL: URLRequest?
 
   func sendRequest(urlRequest: URLRequest) {
     didCallSendRequest = true
-    incomingURLRequest = urlRequest;
+    incomingURL = urlRequest;
   }
 }

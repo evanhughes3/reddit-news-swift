@@ -1,11 +1,14 @@
 import Foundation
 
-protocol JSONClient {
-  func sendRequest(url: URL)
-}
+class JSONClient: NSObject, NetworkClient {
+  var urlSessionClient: NetworkClient
 
-class DefaultJSONClient: NSObject, JSONClient {
-  func sendRequest(url: URL) {
-    
+  init(urlSessionClient: NetworkClient) {
+    self.urlSessionClient = urlSessionClient
+    super.init()
+  }
+
+  func sendRequest(urlRequest: URLRequest) {
+    self.urlSessionClient.sendRequest(urlRequest: urlRequest)
   }
 }
