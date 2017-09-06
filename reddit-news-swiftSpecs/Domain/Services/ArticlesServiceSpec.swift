@@ -10,7 +10,7 @@ class ArticlesServiceSpec: QuickSpec {
   override func spec() {
     describe("ArticlesServiceSpec") {
       var jsonClient: JSONClientMock!
-      var articlesDeserializer: ArticleDeserializerMock!
+      var articlesDeserializer: ArticlesDeserializerMock!
       var subject: ArticlesService!
 
       beforeEach {
@@ -19,8 +19,8 @@ class ArticlesServiceSpec: QuickSpec {
         jsonClient = JSONClientMock();
         injector.bind(JSONClient.self, toInstance: jsonClient)
 
-        articlesDeserializer = ArticleDeserializerMock();
-        injector.bind(ArticleDeserializer.self, toInstance: articlesDeserializer)
+        articlesDeserializer = ArticlesDeserializerMock();
+        injector.bind(ArticlesDeserializer.self, toInstance: articlesDeserializer)
 
         subject = injector.getInstance(ArticlesService.self) as! ArticlesService
       }

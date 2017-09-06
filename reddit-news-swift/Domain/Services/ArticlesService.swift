@@ -6,10 +6,10 @@ protocol ArticlesServiceProtocol {
 }
 
 class ArticlesService: NSObject, ArticlesServiceProtocol {
-  let articlesDeserializer: ArticleDeserializerProtocol
+  let articlesDeserializer: ArticlesDeserializerProtocol
   let jsonClient: JSONClientProtocol
 
-  public required init (articlesDeserializer: ArticleDeserializerProtocol, 
+  public required init (articlesDeserializer: ArticlesDeserializerProtocol, 
                         jsonClient: JSONClientProtocol
   ) {
     self.articlesDeserializer = articlesDeserializer
