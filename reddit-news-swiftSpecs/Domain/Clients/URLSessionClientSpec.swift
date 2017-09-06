@@ -3,24 +3,25 @@ import Quick
 import Nimble
 import Blindside
 import CBGPromise
+import PivotalCoreKit
 @testable import reddit_news_swift
 
 class URLSessionClientSpec: QuickSpec {
   override func spec() {
-    fdescribe("URLSessionClientSpec") {
-      var injector: BSInjector & BSBinder!
+    describe("URLSessionClientSpec") {
       var urlSession: URLSessionMock!
-      var queue: OperationQueueMock!
+      var queue: PSHKFakeOperationQueue!
       var subject: URLSessionClient!
 
       beforeEach {
-        injector = InjectorProvider.injector()
+        let injector = InjectorProvider.injector()
         
         urlSession = URLSessionMock()
         injector.bind(URL_SESSION_INJECTOR_KEY, toInstance: urlSession)
 
-        queue = OperationQueueMock()
-        injector.bind(OperationQueue.self, toInstance: queue)
+        queue = PSHKFakeOperationQueue()
+        queue.runSynchronously = false
+        injector.bind(MAIN_QUEUE_INJECTOR_KEY, toInstance: queue)
 
         subject = injector.getInstance(URLSessionClient.self) as! URLSessionClient
       }
@@ -51,8 +52,11 @@ class URLSessionClientSpec: QuickSpec {
             urlSession.incomingCompletionHandler?(nil, nil, error)
           }
           
-          it("should reject the promise") {
-            expect(future.value).to(equal(.Error(error)))
+          it("should reject the promise on the main queue") {
+            expect(future.value).to(beNil())
+            queue.runNextOperation()
+
+            expect(future.value) == .Error(error)  
           }
         }
 
@@ -65,13 +69,28 @@ class URLSessionClientSpec: QuickSpec {
               urlSession.incomingCompletionHandler?(data, nil, nil)
             }
             
-            it("should resolve the promise") {
-              expect(future.value).to(equal(.Success(data)))
+            it("should resolve the promise on the main queue") {
+              expect(future.value).to(beNil())
+              queue.runNextOperation()
+              
+              expect(future.value) == .Success(data)
             }
           }
 
           context("when there is NOT data") {
-            
+            var expectedError: NetworkError!
+
+            beforeEach() {
+              expectedError = NetworkError(localizedTitle: "Error", localizedDescription: "Something went wrong :(, try again later", code: 500)
+              urlSession.incomingCompletionHandler?(nil, nil, nil)
+            }
+
+            it("should reject the promise on the main queue") {
+              expect(future.value).to(beNil())
+              queue.runNextOperation()
+
+              expect(future.value) == .Error(expectedError)
+            }
           }
         }
       }

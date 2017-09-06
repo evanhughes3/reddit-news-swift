@@ -1,15 +1,33 @@
 import Foundation
 import CBGPromise
+import SwiftyJSON
 
-class JSONClient: NSObject, NetworkClient {
-  var urlSessionClient: NetworkClient
+protocol JSONClientProtocol {
+  func sendRequest(urlRequest: URLRequest) -> Future<JSONResponse>
+}
 
-  init(urlSessionClient: NetworkClient) {
+class JSONClient: NSObject, JSONClientProtocol {
+  var urlSessionClient: URLSessionClientProtocol
+
+  init(urlSessionClient: URLSessionClientProtocol) {
     self.urlSessionClient = urlSessionClient
     super.init()
   }
 
-  func sendRequest(urlRequest: URLRequest) -> Future<NetworkResponse> {
-    return self.urlSessionClient.sendRequest(urlRequest: urlRequest)
+  func sendRequest(urlRequest: URLRequest) -> Future<JSONResponse> {
+    let promise = Promise<JSONResponse>()
+    
+    let future = self.urlSessionClient.sendRequest(urlRequest: urlRequest)
+
+    future.then { response in
+      switch response {
+        case .Success(let data):
+          promise.resolve(.Success(JSON(data: data)))
+        case .Error(let error):
+          promise.resolve(.Error(error))
+       }
+     }
+    
+    return promise.future
   }
 }

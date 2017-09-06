@@ -5,7 +5,8 @@ class InjectorProvider {
     return Blindside.injector(withModules: [
       ControllersModule.init(),
       ServicesModule.init(),
-      ClientsModule.init()
+      ClientsModule.init(),
+      FoundationModule.init()
     ]) as! BSInjector & BSBinder
   } 
 }

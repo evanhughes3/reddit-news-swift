@@ -7,12 +7,11 @@ import Blindside
 class ArticlesControllerSpec: QuickSpec {
   override func spec() {
     describe("ArticlesController") {
-      var injector: BSInjector & BSBinder!
       var articleService: ArticlesServiceMock!
       var subject: ArticlesController!
 
       beforeEach {
-        injector = InjectorProvider.injector()
+        let injector = InjectorProvider.injector()
         
         articleService = ArticlesServiceMock()
         injector.bind(ArticlesService.self, toInstance: articleService)

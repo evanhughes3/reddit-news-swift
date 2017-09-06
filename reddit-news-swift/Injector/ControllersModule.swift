@@ -1,4 +1,3 @@
-
 import Blindside
 
 class ControllersModule: BSModule {

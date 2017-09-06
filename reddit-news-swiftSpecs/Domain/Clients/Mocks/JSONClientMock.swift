@@ -2,14 +2,14 @@ import Foundation
 import CBGPromise
 @testable import reddit_news_swift
 
-class JSONClientMock: NetworkClient {
+class JSONClientMock: JSONClientProtocol {
   var didCallSendRequest: Bool = false
   var incomingURLRequest: URLRequest?
 
-  func sendRequest(urlRequest: URLRequest) -> Future<NetworkResponse> {
+  func sendRequest(urlRequest: URLRequest) -> Future<JSONResponse> {
     didCallSendRequest = true
     incomingURLRequest = urlRequest;
-    let promise = Promise<NetworkResponse>()
+    let promise = Promise<JSONResponse>()
     return promise.future
   }
 }

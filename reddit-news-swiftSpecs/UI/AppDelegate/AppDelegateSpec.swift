@@ -7,14 +7,13 @@ import Blindside
 class AppDelegateSpec: QuickSpec {
   override func spec() {
     describe("AppDelegate") {
-      var injector: BSInjector & BSBinder!
       var articlesController: ArticlesController!
       var subject: AppDelegate!
 
       beforeEach {
+        let injector = InjectorProvider.injector()
+        
         subject = AppDelegate()
-
-        injector = InjectorProvider.injector()
         
         injector.bind(ArticlesService.self, toInstance: ArticlesServiceMock()) //to prevent actually making a request...
         

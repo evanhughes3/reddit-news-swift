@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EFC967F8B58C7A807006DB8 /* Pods_reddit_news_swift_reddit_news_swiftSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2DE2B38FCBEEF1889F4CB0 /* Pods_reddit_news_swift_reddit_news_swiftSpecs.framework */; };
 		3683C4C1716930B9767EAAA2 /* Pods_reddit_news_swiftSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3229F2BB797AA6D7D1D6F376 /* Pods_reddit_news_swiftSpecs.framework */; };
 		4B74C3331F4A78E600D9C6F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B74C3321F4A78E600D9C6F0 /* ViewController.swift */; };
 		4B74C3381F4A78E600D9C6F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B74C3371F4A78E600D9C6F0 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		96EE8239E8E2A3F06062BA6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8ABC585436A2567A2106 /* AppDelegate.swift */; };
 		96EE82E7B4BBFA7D23F2F31F /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8CBC49A5198FAF0476DF /* NetworkResponse.swift */; };
 		96EE83B0217CA0EC8DA95BCE /* ArticlesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE85DF11BA330D26D79446 /* ArticlesService.swift */; };
+		96EE83B66E899C1FF00064A2 /* JSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8255E892C75659A4160C /* JSONResponse.swift */; };
 		96EE8412C5D0ABAA0909C0FA /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8F31AD03543FE47FBCF4 /* URLSessionMock.swift */; };
 		96EE8416B58C99A424CBA47E /* InjectorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE801F860BBF740C6A839F /* InjectorProvider.swift */; };
 		96EE842DA07BE6CF57DDC85E /* ArticlesServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8555C760E0B36B89A848 /* ArticlesServiceSpec.swift */; };
@@ -26,6 +28,7 @@
 		96EE8591AFCF9069EAA4A92B /* URLSessionClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8151E4AA654565E98DB7 /* URLSessionClientSpec.swift */; };
 		96EE869336FA0625C0C3EF3E /* JSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE85D205C97D27112E1462 /* JSONClient.swift */; };
 		96EE8720B3E500CC6F92DA3D /* AppDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE80B371E67B93471ADCF8 /* AppDelegateMock.swift */; };
+		96EE8727314B23C6E7D97D3D /* FoundationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8B2F2E94928C1B01DB2C /* FoundationModule.swift */; };
 		96EE88A6E7039308F3AA07C8 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8B19599444C08CA19A8F /* URLSessionClient.swift */; };
 		96EE88A6E75FC350B82F4F89 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE87CC46B4E444BA82A692 /* main.swift */; };
 		96EE88ADA7BFDC5F9D9B7C53 /* JSONClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE85B41ABE6C22A4B34C08 /* JSONClientMock.swift */; };
@@ -33,10 +36,9 @@
 		96EE8A045526F02175909F49 /* AppDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE80B371E67B93471ADCF8 /* AppDelegateMock.swift */; };
 		96EE8AB5893EC5DAA8D2C033 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8CD4B4FB3FB64B72F97D /* Article.swift */; };
 		96EE8ABAA9C51B33BF3F7493 /* DataSessionTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE83E899A895BA1A8BFBAB /* DataSessionTaskMock.swift */; };
-		96EE8B25D4FE861E7F9BD58D /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE80ECFE8C1A6CBFCF4899 /* NetworkClient.swift */; };
 		96EE8D36FFD3614FBCB0A6B5 /* ControllersModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE83006D61E0EA4B825D96 /* ControllersModule.swift */; };
+		96EE8D59EE9D93322DE4DEB3 /* fetch_articles_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 96EE8C529A4889B69574CD6A /* fetch_articles_response.json */; };
 		96EE8E770BEB2620BEC898EC /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8110D58AC2E204414DE7 /* AppDelegateSpec.swift */; };
-		96EE8E97425AA0EA42F348C4 /* OperationQueueMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE809CF681E38659DC40E7 /* OperationQueueMock.swift */; };
 		96EE8F276451DA21A478E090 /* JSONClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE800B7EADD221A36D246E /* JSONClientSpec.swift */; };
 		96EE8F281F892DD879B5A614 /* InjectorKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8D7B70FBA8F05F7DE024 /* InjectorKeys.swift */; };
 		96EE8F501D0AF0F2264BC4DA /* URLSessionClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8C3B43A42DD2DF0AB4B5 /* URLSessionClientMock.swift */; };
@@ -68,12 +70,11 @@
 		837ABC76EECAF43D2CA57C62 /* Pods_reddit_news_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reddit_news_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EE800B7EADD221A36D246E /* JSONClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClientSpec.swift; sourceTree = "<group>"; };
 		96EE801F860BBF740C6A839F /* InjectorProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectorProvider.swift; sourceTree = "<group>"; };
-		96EE809CF681E38659DC40E7 /* OperationQueueMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationQueueMock.swift; sourceTree = "<group>"; };
 		96EE80B371E67B93471ADCF8 /* AppDelegateMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateMock.swift; sourceTree = "<group>"; };
-		96EE80ECFE8C1A6CBFCF4899 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		96EE8110D58AC2E204414DE7 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		96EE8151E4AA654565E98DB7 /* URLSessionClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionClientSpec.swift; sourceTree = "<group>"; };
 		96EE818C7666004C870CD88C /* ArticlesControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesControllerSpec.swift; sourceTree = "<group>"; };
+		96EE8255E892C75659A4160C /* JSONResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResponse.swift; sourceTree = "<group>"; };
 		96EE83006D61E0EA4B825D96 /* ControllersModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllersModule.swift; sourceTree = "<group>"; };
 		96EE83E899A895BA1A8BFBAB /* DataSessionTaskMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSessionTaskMock.swift; sourceTree = "<group>"; };
 		96EE8555C760E0B36B89A848 /* ArticlesServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesServiceSpec.swift; sourceTree = "<group>"; };
@@ -85,7 +86,9 @@
 		96EE887AD186595F2FD9BF61 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		96EE8ABC585436A2567A2106 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96EE8B19599444C08CA19A8F /* URLSessionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionClient.swift; sourceTree = "<group>"; };
+		96EE8B2F2E94928C1B01DB2C /* FoundationModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationModule.swift; sourceTree = "<group>"; };
 		96EE8C3B43A42DD2DF0AB4B5 /* URLSessionClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionClientMock.swift; sourceTree = "<group>"; };
+		96EE8C529A4889B69574CD6A /* fetch_articles_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fetch_articles_response.json; sourceTree = "<group>"; };
 		96EE8CBC49A5198FAF0476DF /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		96EE8CD4B4FB3FB64B72F97D /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		96EE8D43A6E76D61BAE98139 /* ServicesModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesModule.swift; sourceTree = "<group>"; };
@@ -93,7 +96,10 @@
 		96EE8DD6E396E35DB7A1FD0C /* ArticleServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleServiceMock.swift; sourceTree = "<group>"; };
 		96EE8F31AD03543FE47FBCF4 /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		B99CF02F6880F3DFA3DB17B4 /* Pods-reddit-news-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reddit-news-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-reddit-news-swift/Pods-reddit-news-swift.release.xcconfig"; sourceTree = "<group>"; };
+		BDFF0590C21BB1B3B09CE886 /* Pods-reddit-news-swift-reddit-news-swiftSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reddit-news-swift-reddit-news-swiftSpecs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-reddit-news-swift-reddit-news-swiftSpecs/Pods-reddit-news-swift-reddit-news-swiftSpecs.debug.xcconfig"; sourceTree = "<group>"; };
+		CA2DE2B38FCBEEF1889F4CB0 /* Pods_reddit_news_swift_reddit_news_swiftSpecs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reddit_news_swift_reddit_news_swiftSpecs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3AF78441E444E167163647 /* Pods-reddit-news-swiftSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reddit-news-swiftSpecs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-reddit-news-swiftSpecs/Pods-reddit-news-swiftSpecs.debug.xcconfig"; sourceTree = "<group>"; };
+		D4231206451E2B5FC1287162 /* Pods-reddit-news-swift-reddit-news-swiftSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reddit-news-swift-reddit-news-swiftSpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-reddit-news-swift-reddit-news-swiftSpecs/Pods-reddit-news-swift-reddit-news-swiftSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		FAE897702294E86E2044885D /* Pods-reddit-news-swiftSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reddit-news-swiftSpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-reddit-news-swiftSpecs/Pods-reddit-news-swiftSpecs.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3683C4C1716930B9767EAAA2 /* Pods_reddit_news_swiftSpecs.framework in Frameworks */,
+				0EFC967F8B58C7A807006DB8 /* Pods_reddit_news_swift_reddit_news_swiftSpecs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +165,7 @@
 				4B74C34A1F4A797E00D9C6F0 /* Info.plist */,
 				96EE8E83D475A742B903CCEF /* Domain */,
 				96EE84A54D35AB681713AEF8 /* UI */,
+				96EE838C2B7282CB3FA60EF4 /* Fixtures */,
 			);
 			name = Specs;
 			path = "reddit-news-swiftSpecs";
@@ -170,6 +178,8 @@
 				B99CF02F6880F3DFA3DB17B4 /* Pods-reddit-news-swift.release.xcconfig */,
 				CB3AF78441E444E167163647 /* Pods-reddit-news-swiftSpecs.debug.xcconfig */,
 				FAE897702294E86E2044885D /* Pods-reddit-news-swiftSpecs.release.xcconfig */,
+				BDFF0590C21BB1B3B09CE886 /* Pods-reddit-news-swift-reddit-news-swiftSpecs.debug.xcconfig */,
+				D4231206451E2B5FC1287162 /* Pods-reddit-news-swift-reddit-news-swiftSpecs.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -181,6 +191,14 @@
 				96EE8555C760E0B36B89A848 /* ArticlesServiceSpec.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		96EE838C2B7282CB3FA60EF4 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				96EE8C529A4889B69574CD6A /* fetch_articles_response.json */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		96EE84100022EF770ADE92D8 /* Mocks */ = {
@@ -217,6 +235,7 @@
 				96EE8D43A6E76D61BAE98139 /* ServicesModule.swift */,
 				96EE86B3360D0B1430148575 /* ClientsModule.swift */,
 				96EE8D7B70FBA8F05F7DE024 /* InjectorKeys.swift */,
+				96EE8B2F2E94928C1B01DB2C /* FoundationModule.swift */,
 			);
 			path = Injector;
 			sourceTree = "<group>";
@@ -263,7 +282,6 @@
 			children = (
 				96EE85D205C97D27112E1462 /* JSONClient.swift */,
 				96EE8B19599444C08CA19A8F /* URLSessionClient.swift */,
-				96EE80ECFE8C1A6CBFCF4899 /* NetworkClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -291,7 +309,6 @@
 				96EE8C3B43A42DD2DF0AB4B5 /* URLSessionClientMock.swift */,
 				96EE8F31AD03543FE47FBCF4 /* URLSessionMock.swift */,
 				96EE83E899A895BA1A8BFBAB /* DataSessionTaskMock.swift */,
-				96EE809CF681E38659DC40E7 /* OperationQueueMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -319,6 +336,7 @@
 				96EE8CD4B4FB3FB64B72F97D /* Article.swift */,
 				96EE8CBC49A5198FAF0476DF /* NetworkResponse.swift */,
 				96EE887AD186595F2FD9BF61 /* NetworkError.swift */,
+				96EE8255E892C75659A4160C /* JSONResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,6 +355,7 @@
 			children = (
 				837ABC76EECAF43D2CA57C62 /* Pods_reddit_news_swift.framework */,
 				3229F2BB797AA6D7D1D6F376 /* Pods_reddit_news_swiftSpecs.framework */,
+				CA2DE2B38FCBEEF1889F4CB0 /* Pods_reddit_news_swift_reddit_news_swiftSpecs.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -440,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EE8D59EE9D93322DE4DEB3 /* fetch_articles_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,11 +490,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-reddit-news-swift/Pods-reddit-news-swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Blindside/Blindside.framework",
 				"${BUILT_PRODUCTS_DIR}/CBGPromise/CBGPromise.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Blindside.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CBGPromise.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -522,11 +544,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-reddit-news-swiftSpecs/Pods-reddit-news-swiftSpecs-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/PivotalCoreKit/PivotalCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PivotalCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,12 +594,13 @@
 				96EE81547C0C5CFEFEA1DB43 /* ServicesModule.swift in Sources */,
 				96EE85201584CF37FC930023 /* ClientsModule.swift in Sources */,
 				96EE88A6E7039308F3AA07C8 /* URLSessionClient.swift in Sources */,
-				96EE8B25D4FE861E7F9BD58D /* NetworkClient.swift in Sources */,
 				96EE8F281F892DD879B5A614 /* InjectorKeys.swift in Sources */,
 				96EE8720B3E500CC6F92DA3D /* AppDelegateMock.swift in Sources */,
 				96EE88A6E75FC350B82F4F89 /* main.swift in Sources */,
 				96EE82E7B4BBFA7D23F2F31F /* NetworkResponse.swift in Sources */,
 				96EE80D4C63294F0E65C330F /* NetworkError.swift in Sources */,
+				96EE83B66E899C1FF00064A2 /* JSONResponse.swift in Sources */,
+				96EE8727314B23C6E7D97D3D /* FoundationModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +618,6 @@
 				96EE8591AFCF9069EAA4A92B /* URLSessionClientSpec.swift in Sources */,
 				96EE8412C5D0ABAA0909C0FA /* URLSessionMock.swift in Sources */,
 				96EE8ABAA9C51B33BF3F7493 /* DataSessionTaskMock.swift in Sources */,
-				96EE8E97425AA0EA42F348C4 /* OperationQueueMock.swift in Sources */,
 				96EE8A045526F02175909F49 /* AppDelegateMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

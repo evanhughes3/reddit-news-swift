@@ -7,13 +7,11 @@ import Blindside
 class ArticlesServiceSpec: QuickSpec {
   override func spec() {
     describe("ArticlesServiceSpec") {
-      var injector: BSInjector & BSBinder!
       var jsonClient: JSONClientMock!
       var subject: ArticlesService!
 
       beforeEach {
-        injector = InjectorProvider.injector()
-
+        let injector = InjectorProvider.injector()
         jsonClient = JSONClientMock();
         injector.bind(JSONClient.self, toInstance: jsonClient)
 
@@ -21,7 +19,7 @@ class ArticlesServiceSpec: QuickSpec {
       }
 
       describe("-fetchArticles") {
-        beforeEach() {
+        beforeEach {
           subject.fetchArticles()
         }
 

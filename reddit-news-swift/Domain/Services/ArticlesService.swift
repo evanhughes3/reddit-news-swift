@@ -5,9 +5,9 @@ protocol FetchArticlesService {
 }
 
 class ArticlesService: NSObject, FetchArticlesService {
-  let jsonClient: NetworkClient
+  let jsonClient: JSONClientProtocol
 
-  public required init (jsonClient: NetworkClient) {
+  public required init (jsonClient: JSONClientProtocol) {
     self.jsonClient = jsonClient
   }
 
