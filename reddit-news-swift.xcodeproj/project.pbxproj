@@ -14,8 +14,10 @@
 		4B74C3531F4A7B0400D9C6F0 /* ArticlesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B74C3511F4A7B0400D9C6F0 /* ArticlesController.xib */; };
 		4B76F2991F564DA300D5AA59 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B76F2981F564DA300D5AA59 /* LaunchScreen.xib */; };
 		90C9BF78E0546A9041CAFC27 /* Pods_reddit_news_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837ABC76EECAF43D2CA57C62 /* Pods_reddit_news_swift.framework */; };
+		96EE80D4C63294F0E65C330F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE887AD186595F2FD9BF61 /* NetworkError.swift */; };
 		96EE81547C0C5CFEFEA1DB43 /* ServicesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8D43A6E76D61BAE98139 /* ServicesModule.swift */; };
 		96EE8239E8E2A3F06062BA6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8ABC585436A2567A2106 /* AppDelegate.swift */; };
+		96EE82E7B4BBFA7D23F2F31F /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8CBC49A5198FAF0476DF /* NetworkResponse.swift */; };
 		96EE83B0217CA0EC8DA95BCE /* ArticlesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE85DF11BA330D26D79446 /* ArticlesService.swift */; };
 		96EE8412C5D0ABAA0909C0FA /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE8F31AD03543FE47FBCF4 /* URLSessionMock.swift */; };
 		96EE8416B58C99A424CBA47E /* InjectorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE801F860BBF740C6A839F /* InjectorProvider.swift */; };
@@ -80,9 +82,11 @@
 		96EE85DF11BA330D26D79446 /* ArticlesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesService.swift; sourceTree = "<group>"; };
 		96EE86B3360D0B1430148575 /* ClientsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsModule.swift; sourceTree = "<group>"; };
 		96EE87CC46B4E444BA82A692 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		96EE887AD186595F2FD9BF61 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		96EE8ABC585436A2567A2106 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96EE8B19599444C08CA19A8F /* URLSessionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionClient.swift; sourceTree = "<group>"; };
 		96EE8C3B43A42DD2DF0AB4B5 /* URLSessionClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionClientMock.swift; sourceTree = "<group>"; };
+		96EE8CBC49A5198FAF0476DF /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		96EE8CD4B4FB3FB64B72F97D /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		96EE8D43A6E76D61BAE98139 /* ServicesModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesModule.swift; sourceTree = "<group>"; };
 		96EE8D7B70FBA8F05F7DE024 /* InjectorKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectorKeys.swift; sourceTree = "<group>"; };
@@ -313,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				96EE8CD4B4FB3FB64B72F97D /* Article.swift */,
+				96EE8CBC49A5198FAF0476DF /* NetworkResponse.swift */,
+				96EE887AD186595F2FD9BF61 /* NetworkError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -463,10 +469,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-reddit-news-swift/Pods-reddit-news-swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Blindside/Blindside.framework",
+				"${BUILT_PRODUCTS_DIR}/CBGPromise/CBGPromise.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Blindside.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CBGPromise.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -566,6 +574,8 @@
 				96EE8F281F892DD879B5A614 /* InjectorKeys.swift in Sources */,
 				96EE8720B3E500CC6F92DA3D /* AppDelegateMock.swift in Sources */,
 				96EE88A6E75FC350B82F4F89 /* main.swift in Sources */,
+				96EE82E7B4BBFA7D23F2F31F /* NetworkResponse.swift in Sources */,
+				96EE80D4C63294F0E65C330F /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

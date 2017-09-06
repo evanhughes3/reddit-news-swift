@@ -3,6 +3,7 @@ use_frameworks!
 
 target 'reddit-news-swift' do
   pod 'Blindside'
+  pod "CBGPromise"
 
   target 'reddit-news-swiftSpecs' do
     inherit! :search_paths

@@ -2,11 +2,12 @@ import UIKit
 import Quick
 import Nimble
 import Blindside
+import CBGPromise
 @testable import reddit_news_swift
 
 class URLSessionClientSpec: QuickSpec {
   override func spec() {
-    describe("URLSessionClientSpec") {
+    fdescribe("URLSessionClientSpec") {
       var injector: BSInjector & BSBinder!
       var urlSession: URLSessionMock!
       var queue: OperationQueueMock!
@@ -25,10 +26,12 @@ class URLSessionClientSpec: QuickSpec {
       }
 
       describe("-sendRequest") {
+        var future: Future<NetworkResponse>!
+        
         beforeEach() {
           let url = URL(string: "https://www.google.com")!
           let urlRequest = URLRequest(url: url)
-          subject.sendRequest(urlRequest: urlRequest)
+          future = subject.sendRequest(urlRequest: urlRequest)
         }
 
         it("should send the data task request") {
@@ -40,18 +43,37 @@ class URLSessionClientSpec: QuickSpec {
           expect(urlSession.dataSessionTask?.didCallResume).to(equal(true))
         }
         
-//        context("when there is an error") {
-//          beforeEach() {
-//            let error = NSError(domain: "foo", code: 2)
-//            urlSession.incomingCompletionHandler?(nil, nil, error)
-//          }
-//        }
+        context("when there is an error") {
+          var error: NetworkError!
 
-//        context("when there is NOT an error") {
-//          beforeEach("") {
-//
-//          }
-//        }
+          beforeEach() {
+            error = NetworkError(localizedTitle: "title", localizedDescription: "description", code: 500)
+            urlSession.incomingCompletionHandler?(nil, nil, error)
+          }
+          
+          it("should reject the promise") {
+            expect(future.value).to(equal(.Error(error)))
+          }
+        }
+
+        context("when there is NOT an error") {
+          context("when there is data") {
+            var data: Data!
+
+            beforeEach() {
+              data = "my special data".data(using: .utf8)
+              urlSession.incomingCompletionHandler?(data, nil, nil)
+            }
+            
+            it("should resolve the promise") {
+              expect(future.value).to(equal(.Success(data)))
+            }
+          }
+
+          context("when there is NOT data") {
+            
+          }
+        }
       }
     }
   }

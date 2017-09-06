@@ -1,4 +1,5 @@
 import Foundation
+import CBGPromise
 
 class JSONClient: NSObject, NetworkClient {
   var urlSessionClient: NetworkClient
@@ -8,7 +9,7 @@ class JSONClient: NSObject, NetworkClient {
     super.init()
   }
 
-  func sendRequest(urlRequest: URLRequest) {
-    self.urlSessionClient.sendRequest(urlRequest: urlRequest)
+  func sendRequest(urlRequest: URLRequest) -> Future<NetworkResponse> {
+    return self.urlSessionClient.sendRequest(urlRequest: urlRequest)
   }
 }
