@@ -5,11 +5,11 @@ import CBGPromise
 class JSONClientMock: JSONClientProtocol {
   var didCallSendRequest: Bool = false
   var incomingURLRequest: URLRequest?
-
+  let promise = Promise<JSONResponse>()
+  
   func sendRequest(urlRequest: URLRequest) -> Future<JSONResponse> {
     didCallSendRequest = true
     incomingURLRequest = urlRequest;
-    let promise = Promise<JSONResponse>()
     return promise.future
   }
 }

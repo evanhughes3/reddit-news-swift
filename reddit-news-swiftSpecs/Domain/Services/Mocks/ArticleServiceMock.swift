@@ -1,10 +1,12 @@
+import CBGPromise
 @testable import reddit_news_swift
 
-class ArticlesServiceMock: FetchArticlesService {
+class ArticlesServiceMock: ArticlesServiceProtocol {
+  let promise = Promise<ArticlesResponse>()
   var didCallFetchArticles: Bool = true
 
-  func fetchArticles() -> Array<Article> {
+  func fetchArticles() -> Future<ArticlesResponse> {
     didCallFetchArticles = true
-    return []
+    return promise.future
   }
 }

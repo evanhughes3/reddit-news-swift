@@ -1,22 +1,39 @@
 import Foundation
+import CBGPromise
 
-protocol FetchArticlesService {
-  func fetchArticles() -> Array<Article>
+protocol ArticlesServiceProtocol {
+  func fetchArticles() -> Future<ArticlesResponse>
 }
 
-class ArticlesService: NSObject, FetchArticlesService {
+class ArticlesService: NSObject, ArticlesServiceProtocol {
+  let articlesDeserializer: ArticleDeserializerProtocol
   let jsonClient: JSONClientProtocol
 
-  public required init (jsonClient: JSONClientProtocol) {
+  public required init (articlesDeserializer: ArticleDeserializerProtocol, 
+                        jsonClient: JSONClientProtocol
+  ) {
+    self.articlesDeserializer = articlesDeserializer
     self.jsonClient = jsonClient
   }
 
-  func fetchArticles() -> Array<Article> {
-    let requestURL = URL(string: "https://www.google.com")!
+  func fetchArticles() -> Future<ArticlesResponse> {
+    let promise = Promise<ArticlesResponse>();
+
+    let requestURL = URL(string: "https://www.reddit.com/r/news.json")!
     let urlRequest = URLRequest(url: requestURL)
 
-    self.jsonClient.sendRequest(urlRequest: urlRequest)
+    self.jsonClient.sendRequest(urlRequest: urlRequest).then { response in 
+      switch (response) {
+        case .Success(let json):
+          promise.resolve(.Success(self.articlesDeserializer.deserializeArticles(response: json)))
+          return
+          
+        case .Error(let error):
+          promise.resolve(.Error(error))
+          return
+      }
+     }
 
-    return []
+    return promise.future
   }
 }

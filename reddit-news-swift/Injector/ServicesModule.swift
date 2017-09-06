@@ -5,6 +5,7 @@ class ServicesModule: BSModule {
   func configure(_ binder: BSBinder) {
     binder.bind(ArticlesService.self) { args, injector in
       return ArticlesService.init(
+              articlesDeserializer: injector.getInstance(ArticleDeserializer.self) as! ArticleDeserializerProtocol,
               jsonClient: injector.getInstance(JSONClient.self) as! JSONClientProtocol
       )
     }
