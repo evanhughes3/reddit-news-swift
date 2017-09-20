@@ -6,7 +6,8 @@ class InjectorProvider {
       ControllersModule.init(),
       ServicesModule.init(),
       ClientsModule.init(),
-      FoundationModule.init()
+      FoundationModule.init(),
+      UseCasesModule.init()
     ]) as! BSInjector & BSBinder
   } 
 }

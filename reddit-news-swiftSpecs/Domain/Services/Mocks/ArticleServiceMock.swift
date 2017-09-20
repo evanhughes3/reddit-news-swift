@@ -3,7 +3,7 @@ import CBGPromise
 
 class ArticlesServiceMock: ArticlesServiceProtocol {
   let promise = Promise<ArticlesResponse>()
-  var didCallFetchArticles: Bool = true
+  var didCallFetchArticles: Bool = false
 
   func fetchArticles() -> Future<ArticlesResponse> {
     didCallFetchArticles = true
