@@ -556,7 +556,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-reddit-news-swiftSpecs/Pods-reddit-news-swiftSpecs-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-reddit-news-swift-reddit-news-swiftSpecs/Pods-reddit-news-swift-reddit-news-swiftSpecs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3B7A8038B67183C44BAB8BF7 /* [CP] Embed Pods Frameworks */ = {
@@ -592,7 +592,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-reddit-news-swiftSpecs-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-reddit-news-swift-reddit-news-swiftSpecs-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -620,20 +620,26 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-reddit-news-swiftSpecs/Pods-reddit-news-swiftSpecs-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-reddit-news-swift-reddit-news-swiftSpecs/Pods-reddit-news-swift-reddit-news-swiftSpecs-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Blindside/Blindside.framework",
+				"${BUILT_PRODUCTS_DIR}/CBGPromise/CBGPromise.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/PivotalCoreKit/PivotalCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Blindside.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CBGPromise.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PivotalCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-reddit-news-swiftSpecs/Pods-reddit-news-swiftSpecs-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-reddit-news-swift-reddit-news-swiftSpecs/Pods-reddit-news-swift-reddit-news-swiftSpecs-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C5FAC72C31D15F9165626419 /* [CP] Check Pods Manifest.lock */ = {
@@ -840,7 +846,7 @@
 		};
 		4B74C34D1F4A797E00D9C6F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB3AF78441E444E167163647 /* Pods-reddit-news-swiftSpecs.debug.xcconfig */;
+			baseConfigurationReference = BDFF0590C21BB1B3B09CE886 /* Pods-reddit-news-swift-reddit-news-swiftSpecs.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "reddit-news-swiftSpecs/Info.plist";
@@ -854,7 +860,7 @@
 		};
 		4B74C34E1F4A797E00D9C6F0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAE897702294E86E2044885D /* Pods-reddit-news-swiftSpecs.release.xcconfig */;
+			baseConfigurationReference = D4231206451E2B5FC1287162 /* Pods-reddit-news-swift-reddit-news-swiftSpecs.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "reddit-news-swiftSpecs/Info.plist";
